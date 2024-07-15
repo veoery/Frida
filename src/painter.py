@@ -23,8 +23,10 @@ from paint_utils3 import canvas_to_global_coordinates
 from robot import *
 from camera.dslr import WebCam, SimulatedWebCam
 
-
 PERPENDICULAR_QUATERNION = np.array([1.77622069e-04,   9.23865441e-01,  -3.82717408e-01,  -1.73978366e-05])
+'''
+垂直四元數
+'''
 
 def shift_image(X, dx, dy):
     X = np.roll(X, dy, axis=0)
@@ -297,6 +299,7 @@ class Painter():
             positions.append([x+noise[0],y+noise[1],z])
         positions.append([x,y,z + 0.02])
         positions.append([x,y,z+self.opt.HOVER_FACTOR])
+        #[None, None, None]
         orientations = [None]*len(positions)
         self.move_to_trajectories(positions, orientations)
 

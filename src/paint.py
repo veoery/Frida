@@ -42,7 +42,8 @@ if __name__ == '__main__':
             pass
 
     # paint_planner_new(painter)
-
+    
+    # 中立
     painter.to_neutral()
 
     w_render = int(opt.render_height * (opt.CANVAS_WIDTH_M/opt.CANVAS_HEIGHT_M))

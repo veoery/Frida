@@ -20,6 +20,7 @@ class Options(object):
         self.CANVAS_WIDTH_PIX  = None # set these after taking a picture
         self.CANVAS_HEIGHT_PIX = None
 
+        #懸停係數
         self.HOVER_FACTOR = 0.1
 
 

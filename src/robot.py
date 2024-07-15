@@ -163,6 +163,7 @@ class Franka(Robot, object):
                 precise (bool) : use precise for slow short movements. else use False, which is fast but unstable
         """
         positions, orientations = np.array(positions), np.array(orientations)
+        # [positions] => [[positions]]追加一個新維度
         if len(positions.shape) == 1:
             positions = positions[None,:]
             orientations = orientations[None,:]
